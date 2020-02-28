@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat: 700&display=swap');
+
+$mobile: 375px;
+$desktop: 1440px;
+
+$linearGradient: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+$veryLightGrayishBlue: hsl(240, 78%, 98%);
+$lightGrayishBlue: hsl(234, 14%, 74%);
+$grayishBlue: hsl(233, 13%, 49%);
+$darkGrayishBlue: hsl(232, 13%, 33%);
+
+body {
+    font-size: 15px;
+    background-color: $veryLightGrayishBlue;
+}
+
+.banner {
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: relative;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;;
+    }
+}
