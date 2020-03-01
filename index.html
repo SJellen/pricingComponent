@@ -16,58 +16,119 @@
 </head>
 <body>
 
-
+<img src="./images/bg-top.svg" alt="top lines" class="rightLines">
+<img src="./images/bg-bottom.svg" alt="bottom lines" class="leftLines">
 
   <div class="banner">
     <h1 class="pricing">
       Our Pricing
     </h1>
   
-    <span class="annually">
-      Annually
-    </span>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>
+
+    <div class="switchBox">
+      <span class="annually">
+        Annually
+      </span>
   
   
-    <span class="monthly">
-      Monthly
-    </span>
+    <label class="switch">
+      <input type="checkbox" >
+      <span class="slider round" onclick="priceToggle()"></span>
+    </label>
+    
+    
+      <span class="monthly">
+        Monthly
+      </span>
+
+
+      
+    </div>
+    
   </div>
   
-  
-  
-  
-
+  <div class="slideBox">
+<div class="slide" id="slide1">
+<h3>
   Basic
-  &dollar;19.99
+</h3>
+<h2 id="bMonthly" >
+  &dollar;</h2><h1 id="basicYear">199.99</h1>
+<!-- <h1 class="yearly">
   &dollar;199.99
+</h1> -->
+<h4>
   500 GB Storage
+</h4>
+<h4>
   2 Users Allowed
+</h4>
+<h4 class="bottomBox">
   Send up to 3 GB
+</h4>
+<button class="sideButton">
   Learn More
+</button>
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+</div>
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
+<div class="slide" id="slide2">
+  <h3>
+    Professional
+  </h3>
+  <h2 id="pMonthly">
+    &dollar;</h2><h1 id="proYear">249.99</h1>
+  <!-- <h1 class="yearly">
+    &dollar;249.99
+  </h1> -->
+  <h4>
+    1 TB Storage
+  </h4>
+  <h4>
+    5 Users Allowed
+  </h4>
+  <h4 class="bottomBox">
+    Send up to 10 GB
+  </h4>
+  <button class="middleButton">
+    Learn More
+  </button>
+  
+  </div>
+
+
+  <div class="slide" id="slide3">
+    <h3>
+      Master
+    </h3>
+    <h2 id="mMonthly" >
+      &dollar;</h2><h1 id="masterYear">399.99</h1>
+    <!-- <h1 class="yearly">
+      &dollar;399.99
+    </h1> -->
+    <h4>
+      2 TB Storage
+    </h4>
+    <h4>
+      10 Users Allowed
+    </h4>
+    <h4 class="bottomBox">
+      Send up to 20 GB
+    </h4>
+    <button class="sideButton">
+      Learn More
+    </button>
+    
+    </div>
+
+
+  </div>
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Scott Jellen</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>

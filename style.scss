@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat: 700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
 
 $mobile: 375px;
 $desktop: 1440px;
@@ -13,14 +13,56 @@ $darkGrayishBlue: hsl(232, 13%, 33%);
 body {
     font-size: 15px;
     background-color: $veryLightGrayishBlue;
+    font-family: 'Montserrat', ;
+}
+
+.leftLines {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.rightLines {
+    position: absolute;
+    top: 0;
+    right:0;
+    z-index: -1;
 }
 
 .banner {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 260px;
+    .pricing {
+        font-weight: 700;
+        font-size: 2rem;
+        color: $grayishBlue;
+        margin-bottom: 2.5rem;
+        margin-top: 4rem;
+    }
+    
+    .switchBox {
+        color: $lightGrayishBlue;
+        font-weight: 700;
+        display: inline-block;
+        padding-bottom: 1.5rem;
+        .monthly {
+           margin-left: 1rem;
+           font-size: .75rem;
+        }
+        .annually {
+           margin-right: 1rem;
+           font-size: .75rem;
+        }
+        
+    }
+
     .switch {
         position: relative;
         display: inline-block;
         width: 60px;
-        height: 34px;
+        height: 30px;
     }
     .switch input {
         opacity: 0;
@@ -28,15 +70,20 @@ body {
         height: 0;
     }
     .slider {
-        position: relative;
+        position: absolute;
         cursor: pointer;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ccc;
+        padding-top: 2px;
+        background-image: $linearGradient;
         -webkit-transition: .4s;
         transition: .4s;
+    }
+
+    .slider:hover {
+        opacity: .75;
     }
     .slider:before {
         position: absolute;
@@ -49,9 +96,210 @@ body {
         transition: .4s;
     }
     input:checked + .slider {
-        background-color: #2196F3;
+        background-image: $linearGradient;
     }
     input:focus + .slider {
-        box-shadow: 0 0 1px #2196f3;;
+        box-shadow: 0 0 1px hsl(237, 63%, 64%);
+    }
+    input:checked + .slider:before {
+        -webkit-transform:  translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .slider.round {
+        border-radius: 34px;
+    }
+    .slider.round:before {
+        border-radius: 50%;
+    }
+}
+
+
+.slideBox {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    max-width: 1050px;
+    margin: 0 auto;
+    .slide {
+        h1 {
+            font-size: 4.5rem;  
+            text-align: center;
+            margin-top: -2.75rem;
+            display: inline-block;
+            margin-bottom: 2.25rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+        h4 {
+            text-align: center; 
+        }
+        h3 {
+            text-align: center;  
+        }
+        
+       
+    }
+    #slide1 {
+        background-color: white;
+        width: 365px;
+        height: 450px;
+        border-radius: 10px;
+        float: left;
+        margin-top: -2%;
+        h4 {
+            border-top: .5px solid $grayishBlue;
+            width: 75%;
+            margin: -5% auto 5% auto;
+            padding: 15px 0;
+            color: $grayishBlue;
+        }
+        .bottomBox {
+            border-bottom: .5px solid $grayishBlue;
+        }
+        h3 {
+            margin-top: 2rem;
+            color: $grayishBlue;
+
+        }
+        h1 {
+            margin-left: 19%;
+            
+        }
+        h2 {
+            margin-left: 10%;
+            margin-bottom: -1.5rem;
+        }
+        button {
+            width: 287px;
+            color: white;
+            height: 44px;
+            border-radius: 5px;
+            border: none;
+            background-image: linear-gradient(to right, hsl(236, 72%, 79%) 30%, hsl(237, 63%, 64%));
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+    }
+    #slide2 {
+        background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%) 30%, hsl(237, 63%, 64%));
+        width: 347px;
+        height: 500px;
+        margin-top: -4rem;
+        border-radius: 10px;
+        margin-left: 33.35%;
+        z-index: 99;
+        color: white;
+        position: relative;
+        h4 {
+            border-top: .5px solid white;
+            width: 75%;
+            margin: 0 auto;
+            padding: 15px 0;
+            color: white;
+        }
+        .bottomBox {
+            border-bottom: .5px solid white;
+        }
+        h3 {
+            
+            padding-top:  3.45rem;
+
+        }
+        h1 {
+            margin-left: 15%;
+            
+        }
+        h2 {
+            margin-left: 10%;
+            margin-bottom: -1.5rem;
+        }
+        
+        button {
+            width: 287px;
+            color: hsl(237, 63%, 64%);
+            height: 44px;
+            border-radius: 5px;
+            border: none;
+            background-color: white;
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 4%;
+            margin-top: 10%;
+        }
+
+    }
+    #slide3 {
+        background-color: white;
+        width: 365px;
+        height: 450px;
+        border-radius: 10px;
+        float: right;
+        margin-top: -45%;
+        h4 {
+            border-top: .5px solid $grayishBlue;
+            width: 75%;
+            margin: -5% auto 5% auto;
+            padding: 15px 0;
+            color: $grayishBlue;
+        }
+        .bottomBox {
+            border-bottom: .5px solid $grayishBlue;
+        }
+        h3 {
+            margin-top: 2rem;
+            color: $grayishBlue;
+
+        }
+        h1 {
+            margin-left: 19%;
+            
+        }
+        h2 {
+            margin-left: 10%;
+            margin-bottom: -1.5rem;
+        }
+        button {
+            width: 287px;
+            color: white;
+            height: 44px;
+            border-radius: 5px;
+            border: none;
+            background-image: linear-gradient(to right, hsl(236, 72%, 79%) 30%, hsl(237, 63%, 64%));
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 12%;
+            margin-top: 5%;
+        }
+    }
+} 
+
+
+
+
+
+
+
+
+.attribution {
+    float: right;
+    opacity: .5;
+    color: $grayishBlue;
+    a {
+        color: $grayishBlue;
+    }
+    :link {
+        color: $grayishBlue;
     }
 }
