@@ -13,7 +13,7 @@ function priceToggle() {
         basic.style.marginLeft = "30%";
         basicDollar.style.marginLeft = "20%";
         pro.innerHTML = "24.99";
-        pro.style.marginLeft = "20%";
+        pro.style.marginLeft = "25%";
         proDollar.style.marginLeft = "15%";
         master.innerHTML = "39.99";
         master.style.marginLeft = "25%";
@@ -23,7 +23,7 @@ function priceToggle() {
         basic.style.marginLeft = "20%";
         basicDollar.style.marginLeft = "10%";
         pro.innerHTML = "249.99";
-        pro.style.marginLeft = "15%";
+        pro.style.marginLeft = "20%";
         proDollar.style.marginLeft = "10%";
         master.innerHTML = "399.99";
         master.style.marginLeft = "20%";

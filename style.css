@@ -3,6 +3,8 @@ body {
   font-size: 15px;
   background-color: #f6f6fe;
   font-family: "Montserrat";
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .leftLines {
@@ -194,6 +196,16 @@ body {
   margin-top: 5%;
 }
 
+.slideBox #slide1 button:hover {
+  cursor: pointer;
+  color: #696fdd;
+  background-color: white;
+  background-image: none;
+  border: 1px solid #494c5f;
+  -webkit-transition: ease-out 500ms;
+  transition: ease-out 500ms;
+}
+
 .slideBox #slide2 {
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(30%, #a3a8f0), to(#696fdd));
   background-image: linear-gradient(to bottom right, #a3a8f0 30%, #696fdd);
@@ -248,6 +260,15 @@ body {
   margin-top: 10%;
 }
 
+.slideBox #slide2 button:hover {
+  cursor: pointer;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+  background-image: opacity 0;
+  border: 1px solid white;
+}
+
 .slideBox #slide3 {
   background-color: white;
   width: 365px;
@@ -300,6 +321,16 @@ body {
   margin-top: 5%;
 }
 
+.slideBox #slide3 button:hover {
+  cursor: pointer;
+  color: #696fdd;
+  background-color: white;
+  background-image: none;
+  border: 1px solid #494c5f;
+  -webkit-transition: ease-out 500ms;
+  transition: ease-out 500ms;
+}
+
 .attribution {
   float: right;
   opacity: .5;
@@ -312,5 +343,72 @@ body {
 
 .attribution :link {
   color: #6d708d;
+}
+
+@media only screen and (max-width: 1100px) {
+  .slideBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .slideBox #slide1 {
+    float: none;
+    margin: 0 auto 5% auto;
+  }
+  .slideBox #slide2 {
+    float: none;
+    margin: 0 auto 5% auto;
+    width: 365px;
+  }
+  .slideBox #slide2 h1 {
+    margin-left: 20%;
+  }
+  .slideBox #slide2 button {
+    margin-left: 10%;
+  }
+  .slideBox #slide3 {
+    float: none;
+    margin: 0 auto 5% auto;
+  }
+  .leftLines {
+    display: none;
+  }
+  .attribution {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  .rightLines {
+    left: 40%;
+  }
+  #slide1 {
+    max-width: 325px;
+  }
+  #slide1 button {
+    max-width: 265px;
+    margin-left: 9% !important;
+  }
+  #slide2 {
+    max-width: 325px;
+  }
+  #slide2 button {
+    max-width: 265px;
+  }
+  #slide3 {
+    max-width: 325px;
+  }
+  #slide3 button {
+    max-width: 265px;
+    margin-left: 9% !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
